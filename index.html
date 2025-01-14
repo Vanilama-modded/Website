@@ -3,87 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Command Generator</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
-    <script src="script.js" defer></script> <!-- Link to external JavaScript for functionality -->
+    <title>Kirby-like 2D Side Scroller Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Minecraft Command Generator</h1>
-        <p>Generate complex Minecraft commands easily!</p>
-    </header>
-
-    <main>
-        <section id="command-input">
-            <h2>Command Parameters</h2>
-            <form id="command-form">
-                <label for="minecraft-version">Choose Minecraft Version:</label>
-                <select id="minecraft-version">
-                    <option value="1.20">1.20</option>
-                    <option value="1.19">1.19</option>
-                    <option value="1.18">1.18</option>
-                    <option value="1.17">1.17</option>
-                    <option value="1.16">1.16</option>
-                    <option value="1.15">1.15</option>
-                    <option value="1.14">1.14</option>
-                    <option value="1.13">1.13</option>
-                    <option value="1.12">1.12</option>
-                    <option value="1.11">1.11</option>
-                    <option value="1.10">1.10</option>
-                    <option value="1.9">1.9</option>
-                    <option value="1.8">1.8</option>
-                    <option value="1.7">1.7</option>
-                    <option value="1.6">1.6</option>
-                    <option value="1.5">1.5</option>
-                    <option value="1.4">1.4</option>
-                    <option value="1.3">1.3</option>
-                    <option value="1.2">1.2</option>
-                    <option value="1.1">1.1</option>
-                    <option value="1.0">1.0</option>
-                </select>
-
-                <label for="command-type">Command Type:</label>
-                <select id="command-type">
-                    <option value="give">/give</option>
-                    <option value="summon">/summon</option>
-                    <option value="effect">/effect</option>
-                    <option value="tp">/tp</option>
-                    <option value="setblock">/setblock</option>
-                    <option value="gamemode">/gamemode</option>
-                    <option value="weather">/weather</option>
-                    <option value="time">/time</option>
-                    <option value="difficulty">/difficulty</option>
-                    <option value="fill">/fill</option>
-                    <option value="clear">/clear</option>
-                    <option value="say">/say</option>
-                    <option value="execute">/execute</option>
-                    <option value="effect">/effect</option>
-                    <option value="setworldspawn">/setworldspawn</option>
-                    <option value="spawnpoint">/spawnpoint</option>
-                    <option value="title">/title</option>
-                    <option value="playsound">/playsound</option>
-                    <option value="particle">/particle</option>
-                    <option value="advancement">/advancement</option>
-                    <option value="loot">/loot</option>
-                    <!-- Add more command types as needed -->
-                </select>
-
-                <label for="target">Target:</label>
-                <input type="text" id="target" placeholder="Player Name or Selector">
-
-                <label for="item">Item:</label>
-                <input type="text" id="item" placeholder="Item ID or Name">
-
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" value="1" min="1">
-
-                <label for="enchantments">Enchantments:</label>
-                <input type="text" id="enchantments" placeholder="e.g. sharpness:5">
-
-                <button type="button" id="generate-command">Generate Command</button>
-            </form>
-        </section>
-
-        <section id="command-output">
-            <h2>Generated Command</h2>
-            <textarea
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
