@@ -17,11 +17,54 @@
         <section id="command-input">
             <h2>Command Parameters</h2>
             <form id="command-form">
+                <label for="minecraft-version">Choose Minecraft Version:</label>
+                <select id="minecraft-version">
+                    <option value="1.20">1.20</option>
+                    <option value="1.19">1.19</option>
+                    <option value="1.18">1.18</option>
+                    <option value="1.17">1.17</option>
+                    <option value="1.16">1.16</option>
+                    <option value="1.15">1.15</option>
+                    <option value="1.14">1.14</option>
+                    <option value="1.13">1.13</option>
+                    <option value="1.12">1.12</option>
+                    <option value="1.11">1.11</option>
+                    <option value="1.10">1.10</option>
+                    <option value="1.9">1.9</option>
+                    <option value="1.8">1.8</option>
+                    <option value="1.7">1.7</option>
+                    <option value="1.6">1.6</option>
+                    <option value="1.5">1.5</option>
+                    <option value="1.4">1.4</option>
+                    <option value="1.3">1.3</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.1">1.1</option>
+                    <option value="1.0">1.0</option>
+                </select>
+
                 <label for="command-type">Command Type:</label>
                 <select id="command-type">
                     <option value="give">/give</option>
                     <option value="summon">/summon</option>
                     <option value="effect">/effect</option>
+                    <option value="tp">/tp</option>
+                    <option value="setblock">/setblock</option>
+                    <option value="gamemode">/gamemode</option>
+                    <option value="weather">/weather</option>
+                    <option value="time">/time</option>
+                    <option value="difficulty">/difficulty</option>
+                    <option value="fill">/fill</option>
+                    <option value="clear">/clear</option>
+                    <option value="say">/say</option>
+                    <option value="execute">/execute</option>
+                    <option value="effect">/effect</option>
+                    <option value="setworldspawn">/setworldspawn</option>
+                    <option value="spawnpoint">/spawnpoint</option>
+                    <option value="title">/title</option>
+                    <option value="playsound">/playsound</option>
+                    <option value="particle">/particle</option>
+                    <option value="advancement">/advancement</option>
+                    <option value="loot">/loot</option>
                     <!-- Add more command types as needed -->
                 </select>
 
@@ -43,41 +86,4 @@
 
         <section id="command-output">
             <h2>Generated Command</h2>
-            <textarea id="output" rows="4" readonly></textarea>
-            <button id="copy-command">Copy to Clipboard</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Minecraft Command Generator. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // JavaScript to handle command generation
-        document.getElementById('generate-command').addEventListener('click', function() {
-            const commandType = document.getElementById('command-type').value;
-            const target = document.getElementById('target').value;
-            const item = document.getElementById('item').value;
-            const amount = document.getElementById('amount').value;
-            const enchantments = document.getElementById('enchantments').value;
-
-            // Construct the command based on user input
-            let command = `/${commandType} ${target} ${item} ${amount}`;
-            if (enchantments) {
-                command += ` {Enchantments:[{id:"${enchantments.split(':')[0]}",lvl:${enchantments.split(':')[1]}}]}`;
-            }
-
-            // Display the generated command
-            document.getElementById('output').value = command;
-        });
-
-        // Copy command to clipboard
-        document.getElementById('copy-command').addEventListener('click', function() {
-            const output = document.getElementById('output');
-            output.select();
-            document.execCommand('copy');
-            alert('Command copied to clipboard!');
-        });
-    </script>
-</body>
-</html>
+            <textarea
