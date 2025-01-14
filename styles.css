@@ -1,0 +1,18 @@
+/* Basic styles for the game container and canvas */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: #87CEEB; /* Sky blue background */
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+canvas {
+    border: 2px solid #000; /* Canvas border */
+    background-color: #fff; /* White background for the game */
+}
