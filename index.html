@@ -3,13 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirby-like 2D Side Scroller Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Beatbox Creator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
-    <div id="game-container">
-        <canvas id="gameCanvas"></canvas>
-    </div>
-    <script src="game.js"></script>
+    <header>
+        <h1>Beatbox Creator</h1>
+        <p>Create your own rhythmic beats!</p>
+    </header>
+
+    <main>
+        <section class="instrument-container">
+            <h2>Choose Your Instruments</h2>
+            <div class="instrument" id="beat1">
+                <button class="play-button">🎤 Beat 1</button>
+            </div>
+            <div class="instrument" id="beat2">
+                <button class="play-button">🎶 Beat 2</button>
+            </div>
+            <div class="instrument" id="beat3">
+                <button class="play-button">🥁 Beat 3</button>
+            </div>
+            <div class="instrument" id="beat4">
+                <button class="play-button">🎸 Beat 4</button>
+            </div>
+            <div class="instrument" id="beat5">
+                <button class="play-button">🎷 Beat 5</button>
+            </div>
+            <div class="instrument" id="beat6">
+                <button class="play-button">🎺 Beat 6</button>
+            </div>
+            <div class="instrument" id="beat7">
+                <button class="play-button">🎻 Beat 7</button>
+            </div>
+            <div class="instrument" id="beat8">
+                <button class="play-button">🎵 Beat 8</button>
+            </div>
+            <!-- Add more instruments as needed -->
+        </section>
+
+        <section class="controls">
+            <h2>Controls</h2>
+            <button id="play-all">Play All</button>
+            <button id="stop-all">Stop All</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Beatbox Creator. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript -->
 </body>
 </html>
