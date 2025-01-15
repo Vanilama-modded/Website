@@ -3,56 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatbox Creator</title>
+    <title>Discord-like Chat Platform</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="script.js" defer></script> <!-- Link to external JavaScript -->
 </head>
 <body>
-    <header>
-        <h1>Beatbox Creator</h1>
-        <p>Create your own rhythmic beats!</p>
-    </header>
+    <div class="container">
+        <!-- Sidebar for channels and friends -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>ChatApp</h1>
+            </div>
+            <nav class="channels">
+                <h2>Channels</h2>
+                <ul>
+                    <li># general</li>
+                    <li># random</li>
+                    <li># announcements</li>
+                </ul>
+            </nav>
+            <nav class="friends">
+                <h2>Friends</h2>
+                <ul>
+                    <li>Friend 1</li>
+                    <li>Friend 2</li>
+                    <li>Friend 3</li>
+                </ul>
+            </nav>
+        </aside>
 
-    <main>
-        <section class="instrument-container">
-            <h2>Choose Your Instruments</h2>
-            <div class="instrument" id="beat1">
-                <button class="play-button">🎤 Beat 1</button>
+        <!-- Main chat area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <h2># general</h2>
+            </header>
+            <div class="messages">
+                <div class="message">
+                    <span class="username">User1:</span>
+                    <span class="text">Hello, everyone!</span>
+                </div>
+                <div class="message">
+                    <span class="username">User2:</span>
+                    <span class="text">Hi there!</span>
+                </div>
             </div>
-            <div class="instrument" id="beat2">
-                <button class="play-button">🎶 Beat 2</button>
-            </div>
-            <div class="instrument" id="beat3">
-                <button class="play-button">🥁 Beat 3</button>
-            </div>
-            <div class="instrument" id="beat4">
-                <button class="play-button">🎸 Beat 4</button>
-            </div>
-            <div class="instrument" id="beat5">
-                <button class="play-button">🎷 Beat 5</button>
-            </div>
-            <div class="instrument" id="beat6">
-                <button class="play-button">🎺 Beat 6</button>
-            </div>
-            <div class="instrument" id="beat7">
-                <button class="play-button">🎻 Beat 7</button>
-            </div>
-            <div class="instrument" id="beat8">
-                <button class="play-button">🎵 Beat 8</button>
-            </div>
-            <!-- Add more instruments as needed -->
-        </section>
-
-        <section class="controls">
-            <h2>Controls</h2>
-            <button id="play-all">Play All</button>
-            <button id="stop-all">Stop All</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Beatbox Creator. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link to external JavaScript -->
+            <form class="message-form" id="messageForm">
+                <input type="text" id="messageInput" placeholder="Type your message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
