@@ -3,54 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord-like Chat Platform</title>
+    <title>Question & Answer Platform</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
     <script src="script.js" defer></script> <!-- Link to external JavaScript -->
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar for channels and friends -->
-        <aside class="sidebar">
-            <div class="logo">
-                <h1>ChatApp</h1>
-            </div>
-            <nav class="channels">
-                <h2>Channels</h2>
-                <ul>
-                    <li># general</li>
-                    <li># random</li>
-                    <li># announcements</li>
-                </ul>
-            </nav>
-            <nav class="friends">
-                <h2>Friends</h2>
-                <ul>
-                    <li>Friend 1</li>
-                    <li>Friend 2</li>
-                    <li>Friend 3</li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- Main chat area -->
-        <main class="chat-area">
-            <header class="chat-header">
-                <h2># general</h2>
-            </header>
-            <div class="messages">
-                <div class="message">
-                    <span class="username">User1:</span>
-                    <span class="text">Hello, everyone!</span>
-                </div>
-                <div class="message">
-                    <span class="username">User2:</span>
-                    <span class="text">Hi there!</span>
-                </div>
-            </div>
-            <form class="message-form" id="messageForm">
-                <input type="text" id="messageInput" placeholder="Type your message..." required>
-                <button type="submit">Send</button>
+        <header>
+            <h1>Ask a Question</h1>
+        </header>
+        
+        <main>
+            <form id="questionForm">
+                <textarea id="questionInput" placeholder="What is your question?" required></textarea>
+                <button type="submit">Submit Question</button>
             </form>
+
+            <div id="questionsList">
+                <h2>Questions</h2>
+                <!-- Questions will be dynamically added here -->
+            </div>
         </main>
     </div>
 </body>
