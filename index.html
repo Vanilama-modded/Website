@@ -3,27 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question & Answer Platform</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
-    <script src="script.js" defer></script> <!-- Link to external JavaScript -->
+    <title>3D Voxel Game</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Ask a Question</h1>
-        </header>
-        
-        <main>
-            <form id="questionForm">
-                <textarea id="questionInput" placeholder="What is your question?" required></textarea>
-                <button type="submit">Submit Question</button>
-            </form>
-
-            <div id="questionsList">
-                <h2>Questions</h2>
-                <!-- Questions will be dynamically added here -->
-            </div>
-        </main>
-    </div>
+    <script type="module" src="voxelGame.js"></script>
 </body>
 </html>
